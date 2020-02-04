@@ -33,7 +33,7 @@ header p:nth-child(3) {
 }
 
 .cards .card {
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .cards .card:first-child {
@@ -137,9 +137,6 @@ header p:nth-child(3) {
   }
   .cards .card .card-title {
     font-size: 1.5em;
-  }
-  .cards .card .card-image img {
-    margin-top: 20px;
   }
   .cards .extra-div > .card:nth-child(1) {
     margin-bottom: 2em;
