@@ -6,10 +6,14 @@ body {
           box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   color: #4c4e61;
+  font-size: 15px;
+}
+
+header {
+  text-align: center;
 }
 
 header p {
-  font-size: 4.35em;
   margin: 0;
   padding: 0;
 }
@@ -24,31 +28,19 @@ header p:nth-child(2) {
 
 header p:nth-child(3) {
   font-weight: 400;
-  font-size: 1.2em;
-  margin-top: 50px;
-  line-height: 3.5em;
+  margin-top: 30px;
   color: #a3a5ae;
 }
 
 .cards .card {
-  margin-left: 1em;
-  margin-right: 1em;
   border-radius: 15px;
 }
 
-.cards .card:nth-child(1) {
+.cards .card:first-child {
   border-top: 10px solid #45d3d3;
 }
 
-.cards .card:nth-child(2) {
-  border-top: 10px solid #ea5353;
-}
-
-.cards .card:nth-child(3) {
-  border-top: 10px solid #fcaf4a;
-}
-
-.cards .card:nth-child(4) {
+.cards .card:last-child {
   border-top: 10px solid #549ef2;
 }
 
@@ -57,37 +49,100 @@ header p:nth-child(3) {
 }
 
 .cards .card .card-paragraph {
-  margin-top: 20px;
   color: #a3a5ae;
-  line-height: 3.5em;
+  margin-top: 20px;
+  line-height: 2em;
+}
+
+.cards .card .card-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.cards .card .card-image img {
+  margin-top: 20px;
+  width: 20%;
+}
+
+.cards .extra-div > .card:first-child {
+  border-top: 10px solid #ea5353;
+}
+
+.cards .extra-div > .card:last-child {
+  border-top: 10px solid #fcaf4a;
 }
 
 @media (min-width: 375px) {
   header {
-    margin: 5em 1em 7em;
-    padding: 3em;
-    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    padding: 1.5em;
+  }
+  header p {
+    font-size: 1.75em;
+  }
+  header p:nth-child(3) {
+    font-size: 1.1em;
+    line-height: 2rem;
   }
   .cards .card {
-    padding: 5em;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding: 2em;
     margin-bottom: 5em;
     -webkit-box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.15);
             box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.15);
   }
   .cards .card .card-title {
-    font-size: 4em;
+    font-size: 2em;
   }
-  .card-image {
+}
+
+@media (min-width: 1440px) {
+  header {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+    margin-top: 2em;
+  }
+  header p {
+    font-size: 2.5em;
+  }
+  header p:nth-child(3) {
+    font-size: 1.25em;
+    line-height: 2rem;
+  }
+  .cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .card-image img {
-    margin-top: 80px;
-    min-width: 20%;
+  .cards .card {
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 300px;
+    height: 200px;
+    padding: 2.5em;
+  }
+  .cards .card .card-title {
+    font-size: 1.5em;
+  }
+  .cards .card .card-image img {
+    margin-top: 20px;
+  }
+  .cards .extra-div > .card:nth-child(1) {
+    margin-bottom: 2em;
   }
 }
 /*# sourceMappingURL=main.css.map */
