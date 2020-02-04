@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap');
 
+$top-border: 10px solid;
+
 body {
     margin: 0;
     padding: 0;
@@ -29,9 +31,22 @@ header p {
 }
 
 .cards {
-    border-radius: 15px;
-    border-top: 10px solid hsl(180, 62%, 55%);
     .card {
+        margin-left: 1em;
+        margin-right: 1em;
+        border-radius: 15px;
+        &:nth-child(1) {
+            border-top: $top-border hsl(180, 62%, 55%);
+        }
+        &:nth-child(2) {
+            border-top: $top-border hsl(0, 78%, 62%);
+        }
+        &:nth-child(3) {
+            border-top: $top-border hsl(34, 97%, 64%);
+        }
+        &:nth-child(4) {
+            border-top: $top-border hsl(212, 86%, 64%);
+        }
         .card-title {
             font-weight: 600;
         }
@@ -50,8 +65,10 @@ header p {
         text-align: center;
     }
     .cards {
-        padding: 5em;
         .card {
+            padding: 5em;
+            margin-bottom: 5em;
+            box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.15);
             .card-title {
                 font-size: 4em;
             }
@@ -62,7 +79,7 @@ header p {
         justify-content: flex-end;
         img {
             margin-top: 80px;
-            min-width: 15%;
+            min-width: 20%;
         }
     }
 }
